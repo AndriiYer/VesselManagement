@@ -6,11 +6,11 @@ using VesselManagement.Infrastructure.Vessels.Models;
 
 namespace VesselManagement.Infrastructure.Vessels.Commands;
 
-public static class CreateVessel
+public static class RegisterVessel
 {
-    public class Command(CreateVesselModel model) : IRequest<VesselModel>
+    public class Command(RegisterVesselModel model) : IRequest<VesselModel>
     {
-        public CreateVesselModel VesselModel { get; init; } = model;
+        public RegisterVesselModel VesselModel { get; init; } = model;
     }
     
     public class Handler(VesselDbContext dbContext) : IRequestHandler<Command, VesselModel>

@@ -18,7 +18,7 @@ namespace VesselManagement.Infrastructure.Vessels.Mappers
             };
         }
 
-        public static Vessel Map(this CreateVesselModel vessel)
+        public static Vessel Map(this RegisterVesselModel vessel)
         {
             return new Vessel
             {

@@ -19,13 +19,13 @@ public class VesselsController(IMediator mediator) : ControllerBase
     /// Registers a new vessel in the system.
     /// </summary>
     /// <param name="model">
-    /// The <see cref="CreateVesselModel"/> containing the details of the vessel to be created.
+    /// The <see cref="RegisterVesselModel"/> containing the details of the vessel to be created.
     /// </param>
     /// <returns>
     /// An <see cref="IActionResult"/> containing:
     /// <list type="bullet">
     /// <item>
-    /// <description>A <see cref="VesselModel"/> representing the created vessel (HTTP 200).</description>
+    /// <description>A <see cref="VesselModel"/> representing the registered vessel (HTTP 200).</description>
     /// </item>
     /// </list>
     /// </returns>
@@ -35,9 +35,9 @@ public class VesselsController(IMediator mediator) : ControllerBase
     [HttpPost]
     [SwaggerResponse(StatusCodes.Status200OK, Type = typeof(VesselModel))]
     [SwaggerResponse(StatusCodes.Status400BadRequest, Type = typeof(void))]
-    public async Task<IActionResult> CreateVessel([FromBody]CreateVesselModel model)
+    public async Task<IActionResult> RegisterVessel([FromBody]RegisterVesselModel model)
     {
-        var query = new CreateVessel.Command(model);
+        var query = new RegisterVessel.Command(model);
         var response = await _mediator.Send(query);
 
         return Ok(response);
@@ -96,7 +96,7 @@ public class VesselsController(IMediator mediator) : ControllerBase
     [SwaggerResponse(StatusCodes.Status200OK, Type = typeof(List<VesselModel>))]
     public async Task<IActionResult> GetVessels()
     {
-        var query = new GetVessels.Query();
+        var query = new GetAllVessels.Query();
         var response = await _mediator.Send(query);
 
         return Ok(response);

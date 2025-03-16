@@ -2,7 +2,7 @@
 
 namespace VesselManagement.Infrastructure.Vessels.Models
 {
-    public class VesselModel : CreateVesselModel
+    public class VesselModel : RegisterVesselModel
     {
         [JsonPropertyName("Id")]
         public Guid Id { get; set; }

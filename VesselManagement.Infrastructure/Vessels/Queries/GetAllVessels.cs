@@ -6,7 +6,7 @@ using VesselManagement.Infrastructure.Vessels.Models;
 
 namespace VesselManagement.Infrastructure.Vessels.Queries
 {
-    public static class GetVessels
+    public static class GetAllVessels
     {
         public class Query : IRequest<List<VesselModel>>
         {

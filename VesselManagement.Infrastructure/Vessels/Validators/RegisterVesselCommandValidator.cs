@@ -5,11 +5,11 @@ using VesselManagement.Infrastructure.Vessels.Commands;
 
 namespace VesselManagement.Infrastructure.Vessels.Validators
 {
-    public class CreateVesselCommandValidator : AbstractValidator<CreateVessel.Command>
+    public class RegisterVesselCommandValidator : AbstractValidator<RegisterVessel.Command>
     {
         private readonly VesselDbContext _vesselDbContext;
         
-        public CreateVesselCommandValidator(VesselDbContext vesselDbContext)
+        public RegisterVesselCommandValidator(VesselDbContext vesselDbContext)
         {
             _vesselDbContext = vesselDbContext;
             

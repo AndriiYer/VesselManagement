@@ -2,7 +2,7 @@
 
 namespace VesselManagement.Infrastructure.Vessels.Models;
 
-public class CreateVesselModel
+public class RegisterVesselModel
 {
     [JsonPropertyName("Name")]
     public string Name { get; set; }
