@@ -1,0 +1,33 @@
+@VesselManagement.WebApi_HostAddress = http://localhost:5202/api/vessels/
+
+GET {{VesselManagement.WebApi_HostAddress}}
+Accept: application/json
+
+###
+GET {{VesselManagement.WebApi_HostAddress}}163e8579-6920-4bfb-ab29-3ab446ceed09
+Accept: application/json
+
+###
+POST {{VesselManagement.WebApi_HostAddress}}
+Accept: application/json
+Content-Type: application/json
+
+{
+  "Name": "TestVessel 2",
+  "IMO": "123456789",
+  "Type": "Tanker",
+  "Capacity": 200000
+}
+
+###
+PUT {{VesselManagement.WebApi_HostAddress}}
+Accept: application/json
+Content-Type: application/json
+
+{
+  "Id": "163e8579-6920-4bfb-ab29-3ab446ceed09",
+  "Name": "TestVessel 3",
+  "IMO": "1234567890",
+  "Type": "Tanker",
+  "Capacity": 300000
+}
