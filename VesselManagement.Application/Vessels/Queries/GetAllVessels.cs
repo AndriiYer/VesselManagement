@@ -1,10 +1,10 @@
 ﻿using MediatR;
 using Microsoft.EntityFrameworkCore;
+using VesselManagement.Application.Vessels.Mappers;
+using VesselManagement.Application.Vessels.Models;
 using VesselManagement.Data;
-using VesselManagement.Infrastructure.Vessels.Mappers;
-using VesselManagement.Infrastructure.Vessels.Models;
 
-namespace VesselManagement.Infrastructure.Vessels.Queries
+namespace VesselManagement.Application.Vessels.Queries
 {
     public static class GetAllVessels
     {

@@ -1,12 +1,8 @@
 using FluentValidation;
 using MediatR;
-using Microsoft.AspNetCore.Diagnostics;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using System.Collections.Generic;
-using System.Net;
+using VesselManagement.Application.Vessels.Models;
 using VesselManagement.Data;
-using VesselManagement.Infrastructure.Vessels.Models;
 using VesselManagement.WebApi.Behaviors;
 using VesselManagement.WebApi.Middleware;
 

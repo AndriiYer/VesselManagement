@@ -1,6 +1,6 @@
 ﻿using System.Text.Json.Serialization;
 
-namespace VesselManagement.Infrastructure.Vessels.Models
+namespace VesselManagement.Application.Vessels.Models
 {
     public class VesselModel : RegisterVesselModel
     {

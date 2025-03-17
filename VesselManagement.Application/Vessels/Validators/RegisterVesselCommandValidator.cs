@@ -1,19 +1,18 @@
 ﻿using FluentValidation;
 using Microsoft.EntityFrameworkCore;
+using VesselManagement.Application.Vessels.Commands;
 using VesselManagement.Data;
-using VesselManagement.Infrastructure.Vessels.Commands;
 
-namespace VesselManagement.Infrastructure.Vessels.Validators
+namespace VesselManagement.Application.Vessels.Validators
 {
-    public class UpdateVesselCommandValidator : AbstractValidator<UpdateVessel.Command>
+    public class RegisterVesselCommandValidator : AbstractValidator<RegisterVessel.Command>
     {
         private readonly VesselDbContext _vesselDbContext;
         
-        public UpdateVesselCommandValidator(VesselDbContext vesselDbContext)
+        public RegisterVesselCommandValidator(VesselDbContext vesselDbContext)
         {
             _vesselDbContext = vesselDbContext;
-
-            RuleFor(v => v.VesselModel.Id).NotEmpty();
+            
             RuleFor(v => v.VesselModel.Name).NotEmpty();
             RuleFor(v => v.VesselModel.Imo).MustAsync(BeUniqueImo).WithMessage("IMO number must be unique.");
             RuleFor(v => v.VesselModel.Type).NotEmpty();

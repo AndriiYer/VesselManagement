@@ -1,11 +1,14 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using System;
 using VesselManagement.Data.Entities;
 
 namespace VesselManagement.Data;
 
-public class VesselDbContext(DbContextOptions<VesselDbContext> options) : DbContext(options)
+public class VesselDbContext : DbContext
 {
+    public VesselDbContext() : base() { }
+    
+    public VesselDbContext(DbContextOptions<VesselDbContext> options) : base(options) { }
+
     public virtual DbSet<Vessel> Vessels { get; set; }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)

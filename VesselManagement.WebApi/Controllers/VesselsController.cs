@@ -1,9 +1,9 @@
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using Swashbuckle.AspNetCore.Annotations;
-using VesselManagement.Infrastructure.Vessels.Commands;
-using VesselManagement.Infrastructure.Vessels.Models;
-using VesselManagement.Infrastructure.Vessels.Queries;
+using VesselManagement.Application.Vessels.Commands;
+using VesselManagement.Application.Vessels.Models;
+using VesselManagement.Application.Vessels.Queries;
 
 namespace VesselManagement.WebApi.Controllers;
 

@@ -1,7 +1,7 @@
-﻿using VesselManagement.Data.Entities;
-using VesselManagement.Infrastructure.Vessels.Models;
+﻿using VesselManagement.Application.Vessels.Models;
+using VesselManagement.Data.Entities;
 
-namespace VesselManagement.Infrastructure.Vessels.Mappers
+namespace VesselManagement.Application.Vessels.Mappers
 
 {
     public static class VesselMapper

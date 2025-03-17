@@ -1,10 +1,9 @@
 ﻿using MediatR;
+using VesselManagement.Application.Vessels.Mappers;
+using VesselManagement.Application.Vessels.Models;
 using VesselManagement.Data;
-using VesselManagement.Data.Entities;
-using VesselManagement.Infrastructure.Vessels.Mappers;
-using VesselManagement.Infrastructure.Vessels.Models;
 
-namespace VesselManagement.Infrastructure.Vessels.Commands;
+namespace VesselManagement.Application.Vessels.Commands;
 
 public static class RegisterVessel
 {

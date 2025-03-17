@@ -1,9 +1,10 @@
 ﻿using MediatR;
+using Microsoft.EntityFrameworkCore;
+using VesselManagement.Application.Vessels.Mappers;
+using VesselManagement.Application.Vessels.Models;
 using VesselManagement.Data;
-using VesselManagement.Infrastructure.Vessels.Mappers;
-using VesselManagement.Infrastructure.Vessels.Models;
 
-namespace VesselManagement.Infrastructure.Vessels.Commands;
+namespace VesselManagement.Application.Vessels.Commands;
 
 public static class UpdateVessel
 {
@@ -16,7 +17,7 @@ public static class UpdateVessel
     {
         public async Task<VesselModel> Handle(Command request, CancellationToken cancellationToken)
         {
-            var vesselEntity = await dbContext.Vessels.FindAsync([request.VesselModel.Id], cancellationToken);
+            var vesselEntity = await dbContext.Vessels.FirstOrDefaultAsync(x => x.Id == request.VesselModel.Id, cancellationToken);
             if (vesselEntity == null)
             {
                 throw new KeyNotFoundException($"Vessel with ID {request.VesselModel.Id} not found.");
